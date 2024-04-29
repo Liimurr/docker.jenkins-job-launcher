@@ -1,0 +1,5 @@
+# jenkins jobs to laucnh:
+jobs :
+  - Test.CommandLineTrigger_Windows
+  - Test.CommandLineTrigger_MacOS
+  - Test.CommandLineTrigger_Linux

@@ -1,0 +1,15 @@
+services:
+  jenkins-job-launcher:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - JENKINS_URL=${JENKINS_URL}
+        - JENKINS_USER=${JENKINS_USER}
+        - JENKINS_PASSWORD=${JENKINS_PASSWORD}
+    image: jenkins-job-launcher:0.1.0
+    volumes:
+      - ./config.yml:/app/config.yml
+    stdin_open: true
+    tty: true
+    network_mode: host
